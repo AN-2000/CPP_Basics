@@ -3,17 +3,20 @@
 using namespace std;
 
 int main(){
-    int f = 0,c;
+    int mif,c,maf,s;
+	cin>>mif>>maf>>s;
 
-    cout<<"F "<<"C "<<endl;
 
-    while(f<=300){
+    while(mif<=maf){
         // 9.0 because 5/9 => int division 
-        c = (f-32)*(5/9.0);
+        c =(int)((5.0/9)*(mif-32));
 
-        cout<<f<<" "<<c<<" "<<endl;    
-        f=f+20;
+
+        cout<<mif<<"	"<<c<<endl;    
+        mif=mif+20;
     }
 
     return 0;
 }
+
+
