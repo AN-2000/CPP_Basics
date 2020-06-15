@@ -6,7 +6,10 @@ int main(){
     char ch;
 
     while(ch!='.'){
-        cin>>ch;
+        // cin>>ch;
+
+        ch = cin.get();
+
         cout<<ch;
     }
 
@@ -14,6 +17,10 @@ int main(){
     //If you enter a line of text and press enter it will print the line(without spaces)
     //This is because the input if only fedded to the program when enter is pressed
     //So if we type a line of text and press enter then each character of the line is passed through the loop one by one.
-    
+    //The whole thing is passed into input buffer
+
+    //"cin>>" does not read white spaces, newlines from input buffer
+    //If you want to read spaces and special characters , we can use cin.get()
+
     return 0;
 }
