@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    char ch;
+    char ch = 'i';
 
     while(ch!='.'){
         // cin>>ch;
