@@ -13,7 +13,7 @@ int main(){
 
 
         cout<<mif<<"	"<<c<<endl;    
-        mif=mif+20;
+        mif=mif+s;
     }
 
     return 0;
