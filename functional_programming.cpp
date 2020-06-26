@@ -2,11 +2,16 @@
 
 using namespace std;
 
-void bubbleSort(int a[],int n){
+
+bool comparator(int a,int b){
+    return a > b;
+}
+
+void bubbleSort(int a[],int n,bool (&cmp)(int a,int b)){
 
     for(int i = 0;i<n-1;i++){
         for(int j = 0;j<n-(i+1);j++){
-            if(a[j]>a[j+1]){
+            if(cmp(a[j],a[j+1])){                           //if(a[j]>a[j+1]){  here comparator is working opposite of in-built sort because of if condition
                 swap(a[j],a[j+1]);
             }
         }
@@ -27,7 +32,7 @@ int main(){
         cin>>a[i];
     }
 
-    bubbleSort(a,n);
+    bubbleSort(a,n,comparator);
 
     return 0;
 }
